@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
+@theme {
+  --font-sans: "Inter", "Calibri", "Segoe UI", sans-serif;
+  --color-paper: #f6f4f1;
+  --color-card: #fffcf9;
+  --color-ink: #1a2422;
+  --color-muted: #5e6d6a;
+  --color-line: #e3ddd4;
+  --color-teal: #0e5c56;
+  --color-teal-deep: #0a3f3b;
+  --color-teal-soft: #e7f2f0;
+  --color-on-teal: #f4f7f6;
+  --color-clay: #b8613a;
+  --color-clay-soft: #f8efe9;
+  --color-sage: #5f7048;
+  --radius-card: 1.25rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--color-paper);
+    color: var(--color-ink);
+    line-height: 1.5;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
